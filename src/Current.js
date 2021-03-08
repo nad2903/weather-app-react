@@ -23,11 +23,11 @@ export default function Current() {
             </div>
             <div className="col">
               <span id="unit-links">
-                <a href="#" id="celsius" className="active">
+                <a href="https://calculator-converter.com/celsius-to-fahrenheit.htm#" id="celsius" className="active">
                   ºC
                 </a>{" "}
                 /
-                <a href="#" id="fahrenheit">
+                <a href="https://calculator-converter.com/celsius-to-fahrenheit.htm" id="fahrenheit">
                   ºF
                 </a>
               </span>
