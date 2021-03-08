@@ -18,7 +18,7 @@ export default function Current() {
           <div className="row">
             <div className="col-3">
               <h5 className="today-temp" id="today-temp">
-                5º
+                6º
               </h5>
             </div>
             <div className="col">
