@@ -1,9 +1,9 @@
-import Search from "./Search";
+import Container from "./Container";
 
 function App() {
   return (
     <div className="App">
-      <Search />
+      <Container />
     </div>
   );
 }
