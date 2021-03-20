@@ -2,9 +2,8 @@ import React from "react";
 
 import "./Weather.css";
 
-export default function Container() {
+export default function Weather() {
   return (
-    
     <div className="weather">
       <div className="row">
         <form id="search-engine">
