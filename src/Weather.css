@@ -1,0 +1,63 @@
+.weather {
+  background-color: aliceblue;
+  border: 1px solid rgb(204, 210, 216);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 20px auto;
+  margin-bottom: 10px;
+}
+
+.weather #search-engine {
+  padding: 5px;
+}
+
+.weather p.today-date-time {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.weather p:first-letter {
+  text-transform: capitalize;
+}
+
+.weather #current-time {
+  margin-top: 0;
+  text-align: center;
+}
+
+.weather .city {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.weather a {
+  text-decoration: none;
+}
+
+.weather #unit-links {
+  color: #212529;
+  position: relative;
+  top: 27px;
+}
+
+.weather #unit-links .active {
+  color: #212529;
+  cursor: default;
+}
+
+.weather .today-temp {
+  font-size: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.weather .today-stats {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}

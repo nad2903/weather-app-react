@@ -1,13 +1,11 @@
-import Container from "./Container";
+import Weather from "./Weather";
 import Link from "./Link";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Container />
+      <Weather />
       <Link />
     </div>
   );
 }
-
-export default App;
