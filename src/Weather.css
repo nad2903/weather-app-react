@@ -9,8 +9,8 @@
   margin-bottom: 10px;
 }
 
-.weather #search-engine {
-  padding: 5px;
+.weather a {
+  text-decoration: none;
 }
 
 .weather p.today-date-time {
@@ -23,11 +23,6 @@
   text-transform: capitalize;
 }
 
-.weather #current-time {
-  margin-top: 0;
-  text-align: center;
-}
-
 .weather .city {
   font-size: 40px;
   margin-top: 10px;
@@ -35,8 +30,25 @@
   text-align: center;
 }
 
-.weather a {
-  text-decoration: none;
+.weather .today-stats {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.weather .today-temp {
+  font-size: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.weather #current-time {
+  margin-top: 0;
+  text-align: center;
+}
+
+.weather #search-engine {
+  padding: 5px;
 }
 
 .weather #unit-links {
@@ -48,16 +60,4 @@
 .weather #unit-links .active {
   color: #212529;
   cursor: default;
-}
-
-.weather .today-temp {
-  font-size: 40px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.weather .today-stats {
-  line-height: 1.5;
-  margin-bottom: 20px;
-  text-align: center;
 }
