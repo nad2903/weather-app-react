@@ -1,8 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+  function handleResponse(response) {
+    console.log(response);
+  }
+
+  const apiKey = "b3a63df8beace64c182e708181f083a8";
+  let city = "Toronto"
+  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+  axios.get(apiUrl).then(handleResponse);
+
+
   return (
     <div className="container">
       <div className="weather">
@@ -14,7 +25,6 @@ export default function Weather() {
                   type="text"
                   className="form-control"
                   placeholder="Search another city..."
-                  aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
                   id="search-city-input"
                   autoComplete="off"
