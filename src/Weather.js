@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 import "./Weather.css";
 
 export default function Weather() {
@@ -18,7 +19,7 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      time: new Date(response.data.dt * 1000),
+      currentTime: new Date(response.data.dt * 1000),
       loaded: true
     })
   }
@@ -51,8 +52,8 @@ export default function Weather() {
               </div>
             </div>
           </form>
-          <div className="row">
-            <span id="current-time">Last updated at {weatherData.time.getHours()}:{weatherData.time.getMinutes()}</span>
+          <div className="row" id="current-time">
+            <FormattedTime data={weatherData.currentTime} />
           </div>
           <div className="row">
             <h1 className="city" id="city">
@@ -63,7 +64,7 @@ export default function Weather() {
             <p className="today-date-time">
               {" "}
               <br />
-              <FormattedDate data={weatherData.time} />
+              <FormattedDate data={weatherData.currentTime} />
             </p>
           </div>
           <div className="row">
