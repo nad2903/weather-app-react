@@ -9,7 +9,7 @@ export default function Weather() {
   const [weatherData, setWeatherData] = useState({loaded: false});
   const apiKey = "b3a63df8beace64c182e708181f083a8";
   let city = "Toronto"
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
   function handleResponse(response) {
     setWeatherData({
