@@ -80,7 +80,7 @@ export default function Weather() {
               <div className="row">
                 <div className="col-3">
                   <h5 className="today-temp" id="today-temp">
-                    {Math.round(weatherData.temp)}
+                    {Math.round(weatherData.temp)}º
                   </h5>
                 </div>
                 <div className="col">
