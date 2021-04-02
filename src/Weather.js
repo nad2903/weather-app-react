@@ -17,6 +17,7 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      time: new Date(response.data.dt * 1000),
       loaded: true
     })
   }
@@ -50,7 +51,7 @@ export default function Weather() {
             </div>
           </form>
           <div className="row">
-            <span id="current-time">Last updated at 05:52 PM</span>
+            <span id="current-time">Last updated at {weatherData.time.getHours()}:{weatherData.time.getMinutes()}</span>
           </div>
           <div className="row">
             <h1 className="city" id="city">
