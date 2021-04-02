@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather() {
@@ -62,7 +63,7 @@ export default function Weather() {
             <p className="today-date-time">
               {" "}
               <br />
-              <span id="today-date">Monday March 8</span>
+              <FormattedDate data={weatherData.time} />
             </p>
           </div>
           <div className="row">
