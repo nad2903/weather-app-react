@@ -63,8 +63,3 @@
   position: relative;
   top: 27px;
 }
-
-.weather #unit-links .active {
-  color: #212529;
-  cursor: default;
-}
