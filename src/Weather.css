@@ -13,6 +13,10 @@
   text-decoration: none;
 }
 
+.weather div.col-3.day {
+  padding: 0 5px;
+}
+
 .weather p.today-date-time {
   display: block;
   margin: 0 auto;
@@ -30,6 +34,14 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 0;
+  text-align: center;
+}
+
+.weather .forecast {
+  background-color: rgb(253, 254, 255);
+  border: 1px solid rgb(204, 210, 216);
+  border-radius: 10px;
+  padding: 5px;
   text-align: center;
 }
 
