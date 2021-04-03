@@ -49,7 +49,7 @@ export default function Weather(props) {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Search another city..."
+                    placeholder="Search a city..."
                     aria-describedby="basic-addon2"
                     id="search-city-input"
                     autoComplete="off"
