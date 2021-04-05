@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import WeatherData from "./WeatherData";
-import Forecast from "./Forecast";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -13,6 +13,8 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       city: response.data.name,
+      latitude: response.data.coord.lat,
+      longitude: response.data.coord.lon,
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
       feelsLike: response.data.main.feels_like,
@@ -20,7 +22,8 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       currentTime: new Date(response.data.dt * 1000),
-      loaded: true
+      loaded: true,
+      forecastLoaded: false
     })
   }
 
@@ -69,20 +72,7 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherData data={weatherData} />
-          <div className="row">
-            <div className="col-3 day">
-              <Forecast />
-            </div>
-            <div className="col-3 day">
-              <Forecast />
-            </div>
-            <div className="col-3 day">
-              <Forecast />
-            </div>
-            <div className="col-3 day">
-              <Forecast />
-            </div>
-          </div>
+          <WeatherForecast loaded={weatherData.forecastLoaded} latitude={weatherData.latitude} longitude={weatherData.longitude}/>
         </div>
       </div>
     );

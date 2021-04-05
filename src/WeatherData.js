@@ -39,7 +39,6 @@ export default function WeatherData(props) {
               <img
                 src={props.data.iconUrl}
                 alt={props.data.description}
-                id="current-icon"
               />
             </div>
             <div className="col-6">

@@ -45,6 +45,14 @@
   text-align: center;
 }
 
+.weather .forecast-icon {
+  width: 75px;
+}
+
+.weather .forecast-max {
+  font-weight: bold;
+}
+
 .weather .today-stats {
   display: block;
   line-height: 1.5;
