@@ -22,8 +22,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       currentTime: new Date(response.data.dt * 1000),
-      loaded: true,
-      forecastLoaded: false
+      loaded: true
     })
   }
 
@@ -72,7 +71,7 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherData data={weatherData} />
-          <WeatherForecast loaded={weatherData.forecastLoaded} latitude={weatherData.latitude} longitude={weatherData.longitude}/>
+          <WeatherForecast latitude={weatherData.latitude} longitude={weatherData.longitude}/>
         </div>
       </div>
     );
